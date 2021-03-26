@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Lieferschein</title>
+</head>
+
+<body>
+<h1>Lieferschein</h1>
+<p>Fugen Sie eine neue Lieferschein ein</p>
+
+<form class="container" action="#" th:action="@{/Lieferschein}" th:object="${lieferschein}" method="post">
+
+    <label class="col-li" for="lieferscheinId">LieferscheinId: </label>
+    <input class="col-li" type="text" id="lieferscheinId" th:field="*{lieferscheinId}" >
+    <!--    <p class="error-message"-->
+    <!--       th:each="error: ${#fields.errors('lieferscheinId')}"-->
+    <!--       th:text="${error}">Validation error</p>-->
+    <br><br>
+    <br><br>
+
+    <label class="col-li" for="kennzeichen">Kennzeichen: </label>
+    <input class="col-li" type="text" id="kennzeichen" th:field="*{kennzeichen}" >
+    <!--    <p class="error-message"-->
+    <!--       th:each="error: ${#fields.errors('kennzeichen')}"-->
+    <!--       th:text="${error}">Validation error</p>-->
+    <br><br>
+    <br><br>
+
+    <label class="col-li" for="erstwiegungTS">ErstwiegungDatumZeit: </label>
+    <input class="col-li" type="LocalDate" id="erstwiegungTS" th:field="*{erstwiegungTS}">
+    <!--<p class="error-message"
+       th:each="error: ${#fields.errors('erstwiegungTS')}"
+       th:text="${error}">Validation error</p>-->
+    <br><br>
+    <br><br>
+
+    <label class="col-li" for="erstwiegungGewicht">ErstwiegungGewicht: </label>
+    <input class="col-li" type="decimal" id="erstwiegungGewicht" th:field="*{erstwiegungGewicht}" >
+    <!--    <p class="error-message"-->
+    <!--       th:each="error: ${#fields.errors('erstwiegungGewicht')}"-->
+    <!--       th:text="${error}">Validation error</p>-->
+    <br><br>
+    <br><br>
+
+    <label class="col-li" for="zweitwiegungTS">ZweitwiegungDatumZeit: </label>
+    <input class="col-li" type="LocalDate" id="zweitwiegungTS" th:field="*{zweitwiegungTS}" >
+    <!--    <p class="error-message"-->
+    <!--       th:each="error: ${#fields.errors('zweitwiegungTS')}"-->
+    <!--       th:text="${error}">Validation error</p>-->
+    <br><br>
+    <br><br>
+
+    <label class="col-li" for="zweitwiegungGewicht">ZweitwiegungGewicht: </label>
+    <input class="col-li" type="decimal" id="zweitwiegungGewicht" th:field="*{zweitwiegungGewicht}" >
+    <!--    <p class="error-message"-->
+    <!--       th:each="error: ${#fields.errors('zweitwiegungGewicht')}"-->
+    <!--       th:text="${error}">Validation error</p>-->
+    <br><br>
+    <br><br>
+
+    <label class="col-li" for="taraGewicht">TaraGewicht: </label>
+    <input class="col-li" type="decimal" id="taraGewicht" th:field="*{taraGewicht}">
+    <!--    <p class="error-message"-->
+    <!--       th:each="error: ${#fields.errors('taraGewicht')}"-->
+    <!--       th:text="${error}">Validation error</p>-->
+    <br><br>
+    <br><br>
+
+    <label class="col-li" for="qualitaet">Qualitaet: </label>
+    <input class="col-li" type="text" id="qualitaet" th:field="*{qualitaet}">
+    <!--    <p class="error-message"-->
+    <!--       th:each="error: ${#fields.errors('qualitaet')}"-->
+    <!--       th:text="${error}">Validation error</p>-->
+    <br><br>
+    <br><br>
+
+    <label class="col-li" for="bezeichnung">Bezeichnung: </label>
+    <input class="col-li" type="text" id="bezeichnung" th:field="*{bezeichnung}">
+    <!--    <p class="error-message"-->
+    <!--       th:each="error: ${#fields.errors('bezeichnung')}"-->
+    <!--       th:text="${error}">Validation error</p>-->
+    <br><br>
+    <br><br>
+
+
+    <label class="col-li" for="lieferfirma">Lieferfirma: </label>
+    <input class="col-li" type="text" id="lieferfirma" th:field="*{lieferfirma}">
+    <!--    <p class="error-message"-->
+    <!--       th:each="error: ${#fields.errors('lieferfirma')}"-->
+    <!--       th:text="${error}">Validation error</p>-->
+    <br><br>
+    <br><br>
+
+    <label class="col-li" for="speditionId">SpeditionId: </label>
+    <input class="col-li" type="text" id="speditionId" th:field="*{speditionId}">
+    <!--    <p class="error-message"-->
+    <!--       th:each="error: ${#fields.errors('speditionId')}"-->
+    <!--       th:text="${error}">Validation error</p>-->
+    <br><br>
+    <br><br>
+
+    <input class="btn3 btn-primary" type="submit" value="submit" id="submit">
+
+
+</form>
+
+
+</body>
+</html>
+l>

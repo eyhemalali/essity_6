@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Lieferfirma</title>
+</head>
+<body>
+<h1>Lieferfirma</h1>
+<p>Fugen Sie eine neue Lieferfirma ein:</p>
+
+<form class="container" action="#" th:action="@{/lieferfirma}" th:object="${lieferfirma}" >
+
+    <label class="col-lf" for="name">Name:</label>
+    <input class="col-lf" type="text" id="name" th:field="*{name}" name="name">
+    <p class="error-message"
+       th:each="error: ${#fields.errors('name')}"
+       th:text="${error}">Validation error</p>
+    <br><br>
+    <br><br>
+
+    <!--    <label class="col-lf" for="adresse">Adresse:</label>-->
+    <!--    <input class="col-lf" type="text"  th:field="*{adresseStrasse}"  name="adresseStrasse">-->
+    <!--    <p class="error-message"-->
+    <!--       th:each="error: ${#fields.errors('adresseStrasse')}"-->
+    <!--       th:text="${error}">Validation error</p>-->
+
+
+    <label class="col-lf" for="adresseNr">Nr:</label>
+    <input class="col-lf" type="text" id="adresseNr" th:field="*{adresseNr}" >
+    <p class="error-message"
+       th:each="error: ${#fields.errors('adresseNr')}"
+       th:text="${error}">Validation error</p>
+    <br><br>
+    <br><br>
+
+    <label class="col-lf" for="plz">Plz:</label>
+    <input class="col-lf" type="text" id="plz" th:field="*{plz}" >
+    <p class="error-message"
+       th:each="error: ${#fields.errors('plz')}"
+       th:text="${error}">Validation error</p>
+    <br><br>
+    <br><br>
+
+    <label class="col-lf" for="ort">Ort:</label>
+    <input class="col-lf" type="text" id="ort" th:field="*{ort}" >
+    <!--    <p class="error-message"-->
+    <!--       th:each="error: ${#fields.errors('ort')}"-->
+    <!--       th:text="${error}">Validation error</p>-->
+    <br><br>
+    <br><br>
+
+    <label class="col-lf" for="land">Ort:</label>
+    <input class="col-lf" type="text" id ="land" th:field="*{land}" name="land">
+    <!--    <p class="error-message"-->
+    <!--       th:each="error: ${#fields.errors('land')}"-->
+    <!--       th:text="${error}">Validation error</p>-->
+    <br><br>
+    <br><br>
+
+    <label class="col-lf" for="telefonNummer">TelefonNummer:</label>
+    <input class="col-lf" type="text" id="telefonNummer" th:field="*{telefonNummer}">
+        <p class="error-message"
+           th:each="error: ${#fields.errors('telefonNummer')}"
+           th:text="${error}">Validation error</p>
+    <br><br>
+    <br><br>
+    <input class="btn2-primary" type="submit" value="submit" id="submit">
+
+</form>
+</body>
+</html>

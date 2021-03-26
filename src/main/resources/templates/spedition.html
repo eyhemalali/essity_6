@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Spedition</title>
+</head>
+
+<body>
+<h1>Spedition</h1>
+<p>Fugen Sie eine neue Spedition ein</p>
+<form class="container" action="#" th:action="@{/spedition}" th:object="${spedition}" method="post">
+
+    <label class="col-sp" for="speditionId">SpeditionId: </label>
+    <input class="col-sp" type="text" id="speditionId" th:field="*{speditionId}" >
+    <p class="error-massage"
+       th:each="error: ${#fields.errors('speditionId')}"
+       th:text="${error}">Validation error</p>
+    <br><br>
+
+    <label class="col-sp" for="name">Name: </label>
+    <input class="col-sp" type="text" id="name" th:field="*{name}">
+    <p class="error-massage"
+       th:each="error: ${#fields.errors('name')}"
+       th:text="${error}">Validation error</p>
+    <br><br>
+
+    <label class="col-sp" for="adresse">Adresse: </label>
+    <input class="col-sp" type="text" id="adresse" th:field="*{adresse}">
+    <p class="error-massage"
+       th:each="error: ${#fields.errors('adresse')}"
+       th:text="${error}">Validation error</p>
+    <br><br>
+
+    <label class="col-sp" for="adresseNr">AdresseNr: </label>
+    <input class="col-sp" type="text" id="adresseNr" th:field="*{adresseNr}">
+    <p class="error-massage"
+       th:each="error: ${#fields.errors('adresseNr')}"
+       th:text="${error}">Validation error</p>
+    <br><br>
+
+    <label class="col-sp" for="adressePlz">AdressePlz: </label>
+    <input class="col-sp" type="text" id="adressePlz" th:field="*{adressePlz}">
+    <p class="error-massage"
+       th:each="error: ${#fields.errors('adressePlz')}"
+       th:text="${error}">Validation error</p>
+    <br><br>
+
+    <label class="col-sp" for="adresseOrt">AdresseOrt: </label>
+    <input class="col-sp" type="text" id="adresseOrt" th:field="*{adresseOrt}">
+    <p class="error-massage"
+       th:each="error: ${#fields.errors('adresseOrt')}"
+       th:text="${error}">Validation error</p>
+    <br><br>
+
+    <label class="col-sp" for="telefonNummer">TelefonNummer: </label>
+    <input class="col-sp" type="text" id="telefonNummer" th:field="*{telefonNummer}">
+    <p class="error-massage"
+       th:each="error: ${#fields.errors('telefonNummer')}"
+       th:text="${error}">Validation error</p>
+    <br><br>
+
+    <input class="btn4 btn-primary" type="submit" value="submit" id="submit">
+
+</form>
+
+
+</body>
+
+</html>

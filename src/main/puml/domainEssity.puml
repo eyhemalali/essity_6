@@ -1,0 +1,56 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+
+class Lieferschein
+{
+    kennzeichen: String
+    erstwiegungTS: LocalDateTime
+    erstwiegungGewicht:  long
+    zweitwiegungTS: LocalDateTime
+    zweitwiegungGewicht: long
+    taraGewicht: long
+    speditionId:  Spedition
+    qualitaet: Qualitaet
+    bezeichnung: String
+
+}
+
+class Spedition
+{
+    name: String
+    adresse : Adresse
+    telefonNummer: String
+}
+
+class Lieferfirma
+{
+    name: String
+    adresse: Adresse
+    telefonNummer: String
+}
+
+class Adresse<<value object>>
+{
+    strasseNummer : String
+    plz : String
+    ort: String
+    land: String
+}
+
+
+enum Qualitaet{
+ MINDERWERTIG,
+ Normal,
+ GUT,
+ EXELLENT
+}
+
+Lieferschein "0" -down- "1" Spedition
+Lieferschein "0..1" -right-  Lieferfirma
+Lieferschein -up-  Qualitaet
+Spedition  -right- Adresse
+Lieferfirma -down- Adresse
+
+
+@enduml
